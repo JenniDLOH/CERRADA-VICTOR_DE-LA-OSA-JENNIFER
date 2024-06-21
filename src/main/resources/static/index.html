@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Odontologica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clinica Odontologica</h1>
+    </header>
+
+    <main>
+        <section id="pacientes">
+            <h2>Pacientes</h2>
+            <form id="form-paciente">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="text" id="dni" placeholder="DNI" required>
+                <input type="date" id="fechaIngreso" placeholder="Fecha de Ingreso" required>
+                <button type="submit">Guardar Paciente</button>
+            </form>
+            <table id="tabla-pacientes">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Fecha de Ingreso</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="body-pacientes">
+                    <!-- Aquí se cargarán los pacientes -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="odontologos">
+            <h2>Odontólogos</h2>
+            <form id="form-odontologo">
+                <input type="text" id="matricula" placeholder="Matrícula" required>
+                <input type="text" id="nombreOdontologo" placeholder="Nombre" required>
+                <input type="text" id="apellidoOdontologo" placeholder="Apellido" required>
+                <button type="submit">Guardar Odontólogo</button>
+            </form>
+            <table id="tabla-odontologos">
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="body-odontologos">
+                    <!-- Aquí se cargarán los odontólogos -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="turnos">
+            <h2>Turnos</h2>
+            <form id="form-turno">
+                <input type="datetime-local" id="fechaYHora" required>
+                <select id="odontologoId" required>
+                    <!-- Opciones de odontólogos se cargarán dinámicamente -->
+                </select>
+                <select id="pacienteId" required>
+                    <!-- Opciones de pacientes se cargarán dinámicamente -->
+                </select>
+                <button type="submit">Guardar Turno</button>
+            </form>
+            <table id="tabla-turnos">
+                <thead>
+                    <tr>
+                        <th>Fecha y Hora</th>
+                        <th>Odontólogo</th>
+                        <th>Paciente</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="body-turnos">
+                    <!-- Aquí se cargarán los turnos -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
